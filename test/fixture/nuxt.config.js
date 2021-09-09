@@ -23,17 +23,25 @@ module.exports = {
     {
       hostname: 'https://example.com/',
       lastmod: new Date().toISOString(),
-      sitemaps: [
-        {
-          path: '/sitemap-foo.xml',
-          routes: ['foo/1', 'foo/2'],
-        },
-        {
-          hostname: 'https://yolo.com/',
-          path: '/sitemap-bar.xml',
-          routes: ['bar/1', 'bar/2'],
-        },
-      ],
+      cacheTime: 1000,
+      sitemaps: async () => {
+        await new Promise((resolve)=> setTimeout(()=> resolve(),300))
+        return [
+          {
+            lastmod: new Date().toISOString(),
+            path: '/sitemap-foo.xml',
+            routes: ['foo/1', 'foo/2'],
+            cacheTime: 1000 * 60 * 15
+          },
+          {
+            lastmod: new Date().toISOString(),
+            hostname: 'https://yolo.com/',
+            path: '/sitemap-bar.xml',
+            routes: ['bar/1', 'bar/2'],
+            cacheTime: 1000 * 60 * 15
+          },
+        ]
+      },
     },
   ],
 }

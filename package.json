@@ -72,7 +72,7 @@
     "husky": "latest",
     "jest": "latest",
     "lint-staged": "latest",
-    "node-fetch": "latest",
+    "node-fetch": "^2.6.1",
     "nuxt": "latest",
     "nuxt-i18n": "latest",
     "prettier": "latest",
