@@ -21,7 +21,7 @@ module.exports = {
       },
     },
     {
-      hostname: 'https://example.com/',
+      //hostname: 'https://example.com/',
       lastmod: new Date().toISOString(),
       cacheTime: 1000,
       sitemaps: async () => {
