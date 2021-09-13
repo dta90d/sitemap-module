@@ -24,7 +24,7 @@
         sitemaps : async () => {
 	        return [
 		        {
-			        path:'sitemaps/your site msp'
+			        path:'sitemaps/your site map'
 		        }
 	        ]
         },
