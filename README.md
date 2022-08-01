@@ -1,3 +1,6 @@
+
+
+
 [![@nuxtjs/sitemap](docs/static/preview.png)](https://sitemap.nuxtjs.org)
 
 # Sitemap Module
@@ -9,6 +12,26 @@
 [![License](https://img.shields.io/npm/l/@nuxtjs/sitemap?style=flat-square)](http://standardjs.com)
 
 > Automatically generate or serve dynamic [sitemap.xml](https://www.sitemaps.org/protocol.html) for Nuxt projects!
+
+## Whats overwritten
+
+1. sitemaps property can be an async function
+2. can add a cache time 
+3. all site maps must be in a folder named sitemaps
+
+    ```js
+    {
+        sitemaps : async () => {
+	        return [
+		        {
+			        path:'sitemaps/your site map'
+		        }
+	        ]
+        },
+        cacheTime: 1000
+    }
+    ```
+
 
 <p align="center">
   <a href="https://sitemap.nuxtjs.org">Read Documentation</a>
