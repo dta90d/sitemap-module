@@ -6,7 +6,7 @@ module.exports = {
   modules: [require('../..')],
   sitemap: [
     {
-      path: 'sitemaps/sitemap.xml',
+      path: 'sitemap/sitemap.xml',
       exclude: ['/exclude'],
       gzip: true,
       hostname: 'http://localhost:3000/',
@@ -29,14 +29,14 @@ module.exports = {
         return [
           {
             lastmod: new Date().toISOString(),
-            path: 'sitemaps/sitemap-foo.xml',
+            path: 'sitemap/sitemap-foo.xml',
             routes: ['foo/1', 'foo/2'],
             cacheTime: 1000 * 60 * 15
           },
           {
             lastmod: new Date().toISOString(),
             //hostname: 'https://yolo.com/',
-            path: 'sitemaps/sitemap-bar.xml',
+            path: 'sitemap/sitemap-bar.xml',
             routes: ['bar/1', 'bar/2'],
             cacheTime: 1000 * 60 * 15
           },
