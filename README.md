@@ -15,22 +15,27 @@
 
 ## Whats overwritten
 
-1. sitemaps property can be an async function
-2. can add a cache time 
-3. all site maps must be in a folder named sitemaps
+1. Sitemaps property can be an async function.
+2. Can add a cache time for sitemap index.
+3. All sitemaps must be in a folder named 'sitemap', e.g.:
 
     ```js
     {
         sitemaps : async () => {
 	        return [
 		        {
-			        path:'sitemap/your site map'
+			        path:'sitemap/your-site-map.xml'
 		        }
 	        ]
         },
         cacheTime: 1000
     }
     ```
+4. Cache refreshes after serving the file, so there's no waiting when the requests are being made. One problem is: lastmod for sitemaps in sitemap index however updates prematurely.
+5. `globalCache` internal variable is no longer used, so some functionality tied to it may be broken, e.g. `staticRoutes`.
+
+## Warning!
+Did not test it fully, only tested sitemap index configuration, no gzip or other options were tested either.
 
 
 <p align="center">
@@ -47,3 +52,8 @@
 
 - [Nicolas Pennec](https://github.com/NicoPennec)
 - [Pooya Parsa](https://github.com/pi0)
+
+## Fork
+
+- [mluria21](https://github.com/mluria21)
+- [dta90d](https://github.com/dta90d)
