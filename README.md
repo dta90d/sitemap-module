@@ -31,7 +31,7 @@
         cacheTime: 1000
     }
     ```
-4. Cache refreshes after serving the file, so there's no waiting when the requests are being made. One problem is: lastmod for sitemaps in sitemap index however updates prematurely.
+4. Cache refreshes after serving the file, so there's no waiting when the requests are being made.
 5. `globalCache` internal variable is no longer used, so some functionality tied to it may be broken, e.g. `staticRoutes`.
 
 ## Warning!
